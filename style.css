@@ -7,15 +7,13 @@ body {
 .container {
   height: 80%;
   aspect-ratio: 1/1;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
 }
 
 .display {
   padding: 2em;
-  grid-column: 1/5;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -23,6 +21,18 @@ body {
   border-radius: 10px;
 }
 
-.eq {
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+
+.btn.lastOp {
+  background-color: pink;
+}
+
+.btn.zero {
   grid-column: 1/3;
 }
